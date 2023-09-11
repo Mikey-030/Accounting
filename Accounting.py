@@ -39,3 +39,5 @@ def main(selectedMode):
 
 mode = str(input("Mode: "))
 main(mode)
+
+#report bug to me
