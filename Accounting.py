@@ -2,7 +2,7 @@
 import time
 
 def writeIn(time, text):
-    fout = open('money.txt', 'a')
+    fout = open('record.txt', 'a')
     fout.write(time + ' ' + text + '\n')
     fout.close()
 
@@ -20,7 +20,7 @@ def main(selectedMode):
             date = time.strftime("%Y-%m-%d", localTime)
             writeIn(date, info)
     elif(selectedMode == 'r'):
-        fin = open('money.txt')
+        fin = open('record.txt')
         text = fin.readline()
         while(text is not None and text != ''):
             print(text, end='')
