@@ -1,1 +1,9 @@
-
+2022-05-07 ['banana', 'fruit', '15']
+2023-05-07 ['banana', 'fruit', '15']
+2023-05-07 ['banana', 'fruit', '15']
+2023-05-07 ['banana', 'fruit', '15']
+2023-05-07 ['banana', 'fruit', '15']
+2023-05-07 ['banana', 'fruit', '15']
+2023-05-07 ['banana', 'fruit', '15']
+2023-09-07 ['banana', 'fruit', '15']
+2023-09-12 ['apple', 'fruit', '20']
