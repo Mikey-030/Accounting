@@ -6,7 +6,7 @@ def runCode():
 
 def sortTypeA(str):
     if(len(str)==4):
-        fin = open('record.txt')
+        fin = open('record.txt', 'r', encoding='utf-8')
         text = fin.readline()
         while(text is not None and text != ''):
             if(text[:4]==str[:4]):
@@ -17,7 +17,7 @@ def sortTypeA(str):
             text = fin.readline()
         fin.close()
     elif(len(str)==7):
-        fin = open('record.txt')
+        fin = open('record.txt', 'r', encoding='utf-8')
         text = fin.readline()
         while(text is not None and text != ''):
             if(text[:7]==str[:7]):
@@ -28,7 +28,7 @@ def sortTypeA(str):
             text = fin.readline()
         fin.close()
     elif(len(str)==10):
-        fin = open('record.txt')
+        fin = open('record.txt', 'r', encoding='utf-8')
         text = fin.readline()
         while(text is not None and text != ''):
             if(text[:10]==str[:10]):
@@ -46,12 +46,12 @@ def sortTypeB(str):
 
 
 def writeIn(time, text):
-    fout = open('record.txt', 'a')
+    fout = open('record.txt', 'a', encoding='utf-8')
     fout.write(time + ' ' + text + '\n')
     fout.close()
 
 def readRecord():
-    fin = open('record.txt')
+    fin = open('record.txt', 'r', encoding='utf-8')
     text = fin.readline()
     while(text is not None and text != ''):
         print(text, end='')
@@ -76,12 +76,10 @@ def main(selectedMode):
 
         case 'r':
             readRecord()
-        case 'i':
-            print("Mode w to write\nMode r to read records\nMode s to search\nMode q to quit")
-            mode = str(input("Mode: "))
-            main(mode)
+
         case 'q':
             return 0
+
         case 's':
             searchType = input('Press t to search by time; Press c to search by categories\nMode: s -> ')
             match searchType:
@@ -93,11 +91,13 @@ def main(selectedMode):
                     sortTypeB(searchCategories)
                 case _:
                     print('Wrong type')
+
         case _:
             print('Please select a valid mode')
             print('For further instruction press i')
             runCode()
 
+print("Press w to write, r to read records, s to search, q to quit.")
 runCode()
 
 #report bug to me
